@@ -57,3 +57,9 @@
     color: #333;
     font-size: 14px;
 }
+
+# Fix bug in data validation function
+def validate_data(data):
+    if not data:
+        return False
+    return isinstance(data, dict)
