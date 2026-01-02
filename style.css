@@ -81,3 +81,9 @@
     color: #333;
     font-size: 14px;
 }
+
+# Add error handling for API requests
+try:
+    response = requests.get(url, timeout=10)
+except requests.Timeout:
+    logger.error('Request timeout')
