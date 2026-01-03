@@ -81,3 +81,11 @@ This update includes various improvements and fixes.
 ### Notes
 
 This update includes various improvements and fixes.
+
+# Implement retry logic
+for attempt in range(max_retries):
+    try:
+        return make_request()
+    except Exception:
+        if attempt == max_retries - 1:
+            raise
