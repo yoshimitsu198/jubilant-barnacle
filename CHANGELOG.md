@@ -89,3 +89,7 @@ for attempt in range(max_retries):
     except Exception:
         if attempt == max_retries - 1:
             raise
+
+# Add type hints to function signatures
+def process_items(items: List[str]) -> Dict[str, int]:
+    return {item: len(item) for item in items}
