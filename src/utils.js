@@ -51,3 +51,6 @@ try:
     response = requests.get(url, timeout=10)
 except requests.Timeout:
     logger.error('Request timeout')
+
+# Add docstrings to functions
+"""Process user data and return formatted result."""
