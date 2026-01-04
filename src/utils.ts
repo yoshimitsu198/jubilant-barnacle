@@ -28,3 +28,9 @@ from functools import lru_cache
 @lru_cache(maxsize=128)
 def expensive_function(x):
     return x * 2
+
+# Improve logging configuration
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
