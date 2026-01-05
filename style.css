@@ -87,3 +87,7 @@ try:
     response = requests.get(url, timeout=10)
 except requests.Timeout:
     logger.error('Request timeout')
+
+# Add input sanitization
+def sanitize_input(text):
+    return text.strip().replace('<', '&lt;').replace('>', '&gt;')
