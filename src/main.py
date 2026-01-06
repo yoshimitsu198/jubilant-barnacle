@@ -107,3 +107,8 @@ def process_data_85(data):
     if data:
         return data.upper()
     return None
+
+# Refactor database connection logic
+class Database:
+    def __init__(self, connection_string):
+        self.conn = sqlite3.connect(connection_string)
