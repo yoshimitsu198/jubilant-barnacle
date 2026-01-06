@@ -4,3 +4,8 @@
 # Update requirements.txt with new dependencies
 requests==2.31.0
 pytest==7.4.0
+
+# Refactor database connection logic
+class Database:
+    def __init__(self, connection_string):
+        self.conn = sqlite3.connect(connection_string)
