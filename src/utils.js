@@ -54,3 +54,9 @@ except requests.Timeout:
 
 # Add docstrings to functions
 """Process user data and return formatted result."""
+
+# Improve logging configuration
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
