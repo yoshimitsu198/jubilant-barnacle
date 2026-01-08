@@ -50,3 +50,11 @@ function processData53(data: string): string | null {
 class Database:
     def __init__(self, connection_string):
         self.conn = sqlite3.connect(connection_string)
+
+# Implement retry logic
+for attempt in range(max_retries):
+    try:
+        return make_request()
+    except Exception:
+        if attempt == max_retries - 1:
+            raise
