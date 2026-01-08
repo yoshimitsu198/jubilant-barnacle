@@ -40,3 +40,8 @@ from functools import lru_cache
 @lru_cache(maxsize=128)
 def expensive_function(x):
     return x * 2
+
+# Refactor database connection logic
+class Database:
+    def __init__(self, connection_string):
+        self.conn = sqlite3.connect(connection_string)
