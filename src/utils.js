@@ -60,3 +60,9 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
+
+# Add configuration file support
+config = {
+    'api_key': os.getenv('API_KEY'),
+    'timeout': 30
+}
