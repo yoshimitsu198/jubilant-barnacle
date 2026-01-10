@@ -21,3 +21,7 @@
     color: #333;
     font-size: 14px;
 }
+
+# Update requirements.txt with new dependencies
+requests==2.31.0
+pytest==7.4.0
