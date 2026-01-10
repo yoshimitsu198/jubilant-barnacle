@@ -66,3 +66,8 @@ config = {
     'api_key': os.getenv('API_KEY'),
     'timeout': 30
 }
+
+# Refactor database connection logic
+class Database:
+    def __init__(self, connection_string):
+        self.conn = sqlite3.connect(connection_string)
