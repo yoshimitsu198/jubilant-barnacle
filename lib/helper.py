@@ -30,3 +30,9 @@ def validate_data(data):
 class Database:
     def __init__(self, connection_string):
         self.conn = sqlite3.connect(connection_string)
+
+# Add error handling for API requests
+try:
+    response = requests.get(url, timeout=10)
+except requests.Timeout:
+    logger.error('Request timeout')
