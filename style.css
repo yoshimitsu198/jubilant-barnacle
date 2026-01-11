@@ -91,3 +91,6 @@ except requests.Timeout:
 # Add input sanitization
 def sanitize_input(text):
     return text.strip().replace('<', '&lt;').replace('>', '&gt;')
+
+# Improve error messages
+raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')
