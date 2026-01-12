@@ -22,3 +22,9 @@ try:
     response = requests.get(url, timeout=10)
 except requests.Timeout:
     logger.error('Request timeout')
+
+# Add configuration file support
+config = {
+    'api_key': os.getenv('API_KEY'),
+    'timeout': 30
+}
